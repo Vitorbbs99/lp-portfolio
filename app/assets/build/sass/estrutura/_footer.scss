@@ -1,0 +1,333 @@
+// Cores
+$footer-bg: #111; // Cor de fundo
+$footer-tit: #fff; // Cor dos títulos
+$footer-color: #ccc; // Cor dos textos
+$footer-accent: $cor_primaria; // Cor de destaque e hover
+
+// Footer geral
+.footer {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 0;
+  background-color: $footer-bg;
+  color: $footer-color;
+  font-size: 15px;
+  font-weight: 300;
+  overflow: hidden;
+
+  // MOBILE
+  @include mq(s) {
+    padding-top: 40px;
+  }
+
+  b,
+  strong {
+    font-weight: 400;
+    color: $footer-tit;
+  }
+
+  a {
+    color: $footer-color;
+
+    &:hover {
+      color: $footer-accent;
+    }
+  }
+}
+
+// Máscara
+.footer .mascara {
+  background: rgba($footer-bg, 0.95);
+}
+
+// Alinha conteúdo
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  // MOBILE
+  @include mq(s) {
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+}
+
+// Coluna
+.footer-col {
+  margin: 0 10px;
+  max-width: 300px;
+
+  // MOBILE
+  @include mq(s) {
+    margin: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+// Título
+.footer-tit {
+  position: relative;
+  font-size: 1.25em;
+  font-weight: bold;
+  text-transform: none;
+  color: $footer-tit;
+  margin-bottom: 15px;
+}
+
+// Links
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  // Item
+  li {
+    display: flex;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    // Ícone
+    i {
+      margin-right: 10px;
+      margin-top: 5px;
+      color: $footer-tit;
+    }
+  }
+  // Links 2 colunas
+  &.col-2 li {
+    width: 50%;
+    padding-right: 10px;
+
+    // MOBILE
+    @include mq(s) {
+      width: 100%;
+      padding-right: 0px;
+    }
+  }
+
+  // Link
+  a {
+    display: flex;
+    font-size: 1em;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+// Sobre
+.footer-sobre {
+  margin-right: 20px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-right: 0px;
+    text-align: center;
+  }
+}
+.footer-logo {
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 20px;
+
+  // MOBILE
+  @include mq(s) {
+    width: 120px;
+  }
+}
+.footer-sobre-texto {
+  margin-bottom: 20px;
+}
+
+// Redes sociais
+.redes-sociais-tit {
+  margin-bottom: 10px;
+}
+.redes-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  // MOBILE
+  @include mq(s) {
+    justify-content: center;
+  }
+
+  // Item
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 7px;
+    line-height: 100%;
+    border-radius: 50%;
+    border: 2px solid $cor_primaria;
+    background-color: transparent;
+    color: $cor_primaria;
+    font-size: 20px;
+    transition: 0.3s ease-out;
+
+    // MOBILE
+    @include mq(s) {
+      margin: 0 4px;
+    }
+
+    &:hover {
+      background: $cor_primaria;
+      color: #fff;
+    }
+  }
+
+  svg {
+    width: 0.95em;
+    color: currentColor;
+  }
+}
+
+// Barra inferior
+.footer-bar {
+  margin-top: 60px;
+  position: relative;
+  border-top: 1px solid rgba($footer-color, 0.1);
+  padding: 20px 10px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 20px;
+  }
+}
+.footer-bar-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.footer-bar-item {
+  a {
+    color: $footer-accent;
+
+    &:hover {
+      color: $footer-accent;
+      opacity: 0.7;
+    }
+  }
+}
+
+// Voltar ao topo
+.gotop {
+  position: fixed;
+  z-index: $z_index_gotop;
+  bottom: 115px;
+  right: 34px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba($cor_primaria, 0.8);
+  cursor: pointer;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+  transform: translate3d(0, 20px, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease-out;
+
+  // MOBILE
+  @include mq(s) {
+    bottom: 95px;
+    right: 28px;
+  }
+
+  &:hover {
+    background: rgba($cor_primaria, 1);
+  }
+
+  &.active {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
+    border-bottom: none;
+    border-right: none;
+    margin-top: 20px;
+  }
+}
+
+// Contatos laterais
+.contatos-laterais {
+  position: fixed;
+  z-index: $z_index_gotop;
+  bottom: 30px;
+  right: 30px;
+  transition: 0.3s ease-out;
+
+  // MOBILE
+  @include mq(s) {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  // Item
+  > a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: $cor_primaria;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    cursor: pointer;
+
+    // MOBILE
+    @include mq(s) {
+      margin: 0 5px;
+    }
+
+    &.whatsapp {
+      background-color: $cor_whatsapp;
+      animation: whats-pulse 3s infinite;
+    }
+  }
+}
+@keyframes whats-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($cor_whatsapp, 1);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba($cor_whatsapp, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($cor_whatsapp, 0);
+  }
+}
+// Oculta o whats lateral
+.pg-login,
+.pg-conta {
+  .contatos-laterais {
+    display: none;
+  }
+}

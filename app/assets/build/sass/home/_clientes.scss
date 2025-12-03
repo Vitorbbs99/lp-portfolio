@@ -1,0 +1,59 @@
+// Seção
+.home-clientes {
+}
+
+// Título
+.home-clientes .titulo {
+}
+
+// Subtítulo
+.home-clientes .subtitulo {
+  font-weight: 300;
+}
+
+// Carrossel
+.carrossel-clientes {
+  // MOBILE (Ajuste para a borda infinita)
+  @include mq(s) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .cliente-item {
+    width: 100%;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+// Cliente bloco item
+.cliente-item {
+  position: relative;
+  display: block;
+  margin: 5px 10px;
+  border: 1px solid rgba(#000, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  filter: grayscale(100%);
+  transition: 0.3s ease-out;
+  will-change: all;
+
+  &[href="#"] {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  // Imagem
+  img {
+    transition: 0.3s ease-out;
+    will-change: all;
+  }
+
+  &:hover {
+    filter: grayscale(0%);
+    img {
+      transform: scale(1.1);
+    }
+  }
+}

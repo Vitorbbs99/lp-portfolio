@@ -1,0 +1,171 @@
+// Header principal
+.header {
+  position: relative;
+  z-index: $z_index_header;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  transition: 0.5s ease;
+
+  // MOBILE
+  @include mq(s) {
+    text-align: center;
+  }
+}
+
+// Conteúdo (Container)
+.header .container {
+  position: static;
+}
+.header-content {
+  position: relative;
+  padding: 20px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // MOBILE
+  @include mq(s) {
+    position: static;
+    justify-content: center;
+  }
+}
+
+// Logo
+.header-logo {
+  display: block;
+  float: left;
+  max-width: 150px;
+
+  // TABLET
+  @include mq(m) {
+    max-width: 120px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100px;
+  }
+
+  img {
+    will-change: transform;
+  }
+
+  &.white {
+    display: none;
+  }
+}
+
+// Direita
+.header-direita {
+  display: flex;
+  align-items: center;
+
+  // MOBILE
+  @include mq(s) {
+    height: 0px;
+  }
+}
+
+// Botões
+.header-botoes {
+  margin-left: 20px;
+
+  // MOBILE
+  @include mq(s) {
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .btn {
+    margin-left: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+
+    // MOBILE
+    @include mq(s) {
+      font-size: 12px;
+    }
+  }
+}
+
+// Telefones
+.header-telefones {
+  position: relative;
+  background-color: rgba(#000, 0.1);
+  padding: 3px;
+  border-radius: 0px;
+  text-align: center;
+  white-space: nowrap;
+
+  // MOBILE
+  @include mq(s) {
+    display: none;
+  }
+
+  // Item
+  a {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $cor_fonte_escura;
+    margin: 0 5px;
+
+    i {
+      margin-right: 3px;
+      color: $cor_primaria;
+    }
+  }
+}
+
+// Header
+.home-full .header-full:not(.active) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  box-shadow: none;
+}
+
+// Logo
+.home-full .header-full:not(.active) .header-logo {
+  // Logo COLORIDO
+  &:not(.white) {
+    display: none;
+  }
+  // Logo BRANCO
+  &.white {
+    display: block;
+  }
+}
+
+// Botões
+.home-full .header-full:not(.active) .btn-terciario {
+  background-color: rgba(#fff, 0.1);
+  color: #fff;
+
+  &:hover {
+    background-color: rgba(#fff, 0.2);
+    color: $cor_primaria;
+  }
+}
+
+// Telefones
+.home-full .header-full:not(.active) .header-telefones {
+  background-color: rgba(#fff, 0.1);
+
+  // Item
+  a {
+    color: #fff;
+
+    i {
+      color: $cor_primaria;
+    }
+  }
+}

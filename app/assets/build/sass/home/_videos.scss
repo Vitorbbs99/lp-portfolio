@@ -1,0 +1,26 @@
+// Seção
+.home-videos {
+}
+
+// Título
+.videos-titulo {
+}
+
+// Subtítulo
+.videos-subtitulo {
+  font-weight: 300;
+}
+
+// Carrossel
+.carrossel-videos {
+  // MOBILE (Ajuste para a borda infinita)
+  @include mq(s) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+.carrossel-videos .bloco-video {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

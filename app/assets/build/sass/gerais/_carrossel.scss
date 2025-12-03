@@ -1,0 +1,132 @@
+// Configurações gerais
+.splide__arrow {
+  width: 3em;
+  height: 3em;
+  background-color: $cor_primaria;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 0.2s ease-out;
+}
+.splide__arrow svg {
+  display: none;
+}
+.splide__arrow::after {
+  content: "";
+  position: absolute;
+  width: 0.85em;
+  height: 0.85em;
+  border: 2px solid #fff;
+  border-bottom: none;
+  border-left: none;
+  transition: all 0.2s ease-out;
+}
+.splide__arrow--prev::after {
+  transform: rotate(225deg);
+  margin-left: 0.25em;
+}
+.splide__arrow--next::after {
+  transform: rotate(45deg);
+  margin-right: 0.25em;
+}
+.splide__track--nav > .splide__list > .splide__slide {
+  border: none !important;
+}
+// Arrows (Branco)
+.carousel-controls-white .splide__arrow {
+  background-color: #ddd;
+}
+.carousel-controls-white .splide__arrow::after {
+  border-color: #222;
+}
+.carousel-controls-white .splide__arrow:hover::after {
+  border-color: $cor_primaria;
+}
+// Arrows (Fade)
+.carousel-arrows-fade .splide__arrow {
+  opacity: 0;
+}
+.carousel-arrows-fade .splide__arrow--prev {
+  transform: translateY(-50%) translateX(-20px);
+}
+.carousel-arrows-fade .splide__arrow--next {
+  transform: translateY(-50%) translateX(20px);
+}
+.carousel-arrows-fade:hover .splide__arrow {
+  opacity: 0.9;
+  transform: translateY(-50%) translateX(0);
+}
+// Arrows (Zoom)
+.carousel-arrows-zoom .splide__arrow {
+  opacity: 0;
+  transform: translateY(-50%) scale(0.6);
+}
+.carousel-arrows-zoom:hover .splide__arrow {
+  opacity: 0.9;
+  transform: translateY(-50%) scale(1);
+}
+
+// Paginação (Dots)
+.splide__pagination {
+  display: flex !important;
+  bottom: 0.85em;
+}
+.splide__pagination__page {
+  width: 12px;
+  height: 12px;
+  border: 2px solid $cor_primaria;
+  background: none;
+  opacity: 0.9;
+
+  &.is-active {
+    background-color: $cor_primaria;
+    transform: scale(1);
+  }
+}
+// Paginação (Branco)
+.carousel-controls-white .splide__pagination__page {
+  border-color: #ddd;
+
+  &.is-active {
+    background-color: #ddd;
+  }
+}
+
+// Barra de progresso
+.splide__progress__bar {
+  background: $cor_primaria;
+}
+
+// Auto height
+.splide.carousel-autoheight {
+  .splide__track {
+    .splide__list {
+      align-items: flex-start !important;
+    }
+  }
+  .splide__slide:not(.is-active) {
+    height: 0 !important;
+  }
+}
+
+// Força a centralização dos itens
+.splide.carousel-force-center {
+  .splide__list {
+    justify-content: center !important;
+  }
+}
+
+// Carrossel padrão
+.carousel {
+  // Arrows
+  .splide__arrow--prev {
+    left: -1.5em;
+  }
+  .splide__arrow--next {
+    right: -1.5em;
+  }
+  // Paginação (Dots)
+  .splide__pagination {
+    position: relative;
+    bottom: -10px;
+    margin-bottom: 20px;
+  }
+}

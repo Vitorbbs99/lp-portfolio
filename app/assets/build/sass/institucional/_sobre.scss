@@ -1,0 +1,206 @@
+// Página
+.pag-sobre {
+}
+
+// Alinha conteúdo
+.pag-sobre-content {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+// Foto
+.pag-sobre-foto-wrp {
+  position: sticky;
+  top: 160px; // <- Ajustar de acordo com a altura do header
+
+  // MOBILE
+  @include mq(s) {
+    position: static;
+    top: initial;
+    margin-bottom: 20px;
+  }
+}
+.pag-sobre-foto {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transform: translateZ(0);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  img {
+    transition: 0.5s ease-in-out;
+  }
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+
+// Textos
+.pag-sobre-infos {
+  padding-left: 10px;
+
+  // MOBILE
+  @include mq(s) {
+    padding-left: 0px;
+  }
+}
+.pag-sobre-texto {
+  font-size: 17px;
+  font-weight: 300;
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 16px;
+  }
+
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
+// Blocos sobre
+.pag-sobre-bl-lista {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 10px;
+  }
+}
+.pag-sobre-bl {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  overflow: hidden;
+  transform: translateZ(0);
+  margin-bottom: 20px;
+
+  &:last-child {
+    // MOBILE
+    @include mq(s) {
+      margin-bottom: 0px;
+    }
+  }
+
+  // MOBILE
+  @include mq(s) {
+    padding: 20px;
+  }
+}
+.pag-sobre-bl-foto {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.pag-sobre-bl-tit {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: $cor_fonte_escura;
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 16px;
+  }
+}
+.pag-sobre-bl-txt {
+  font-size: 16px;
+  font-weight: 300;
+  color: $cor_fonte_escura;
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 15px;
+  }
+}
+
+// Fotos
+.pag-sobre-galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pag-sobre-galeria-item {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  figure {
+    display: block;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transform: translateZ(0);
+    overflow: hidden;
+
+    img {
+      transition: 0.5s ease-in-out;
+      will-change: transform;
+    }
+  }
+  &:hover figure img {
+    transform: scale(1.2);
+  }
+}
+
+// Equipe
+.lista-equipe {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.equipe {
+  position: relative;
+  display: block;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  &.modal-open {
+    cursor: pointer;
+  }
+}
+.equipe-foto {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid $cor_primaria;
+  transform: translateZ(0);
+  overflow: hidden;
+
+  img {
+    transition: 0.3s ease-in-out;
+    will-change: transform;
+  }
+}
+.equipe:hover .equipe-foto img {
+  transform: scale(1.1);
+}
+.equipe-infos {
+  margin-top: 10px;
+  text-align: center;
+}
+.equipe-titulo {
+  font-weight: bold;
+  color: $cor_fonte_escura;
+}
+.equipe-texto {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  color: $cor_fonte_escura;
+}

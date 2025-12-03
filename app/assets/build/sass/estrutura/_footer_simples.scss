@@ -1,0 +1,63 @@
+// Footer simples
+.footer-simples {
+  padding-top: 40px;
+}
+
+// Alinha conteúdo
+.footer-simples .footer-content {
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+// Coluna
+.footer-simples .footer-col {
+  margin: 0;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 100%;
+}
+
+// Links
+.footer-simples .footer-links {
+  justify-content: center;
+
+  // Item
+  li {
+    display: inline-flex;
+    width: auto;
+  }
+
+  // Link
+  a {
+    padding: 0 10px;
+  }
+}
+
+// Sobre
+.footer-simples .footer-sobre {
+  margin-right: 0px;
+  text-align: center;
+}
+.footer-simples .footer-logo {
+  width: 150px;
+
+  // MOBILE
+  @include mq(s) {
+    width: 100px;
+  }
+}
+
+// Redes sociais
+.footer-simples .redes-sociais {
+  justify-content: center;
+
+  // Item
+  a {
+    margin: 0 4px;
+  }
+}
+
+// Barra inferior
+.footer-simples .footer-bar {
+  margin-top: 0px;
+}

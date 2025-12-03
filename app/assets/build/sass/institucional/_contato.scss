@@ -1,0 +1,94 @@
+// Formulário
+.form-contato {
+  border-radius: 12px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  // MOBILE
+  @include mq(s) {
+    padding: 20px;
+  }
+}
+
+// Lateral
+.contato-lateral {
+  border-radius: 12px;
+  padding: 20px;
+  background: linear-gradient(
+    to right top,
+    darken($cor_primaria, 20%),
+    $cor_primaria
+  );
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  // TABLET
+  @include mq(m) {
+    margin-top: 30px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 20px;
+  }
+}
+.contato-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: rgba(#fff, 0.05);
+  border-radius: 8px;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: rgba(#fff, 0.2);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.contato-item-icon {
+  flex-shrink: 0;
+  font-size: 26px;
+  margin-right: 15px;
+}
+.contato-item-infos {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+.contato-item-tit {
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+.contato-item-txt {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #fff;
+
+  &.truncated {
+    word-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  a {
+    color: #fff;
+  }
+}
+.contato-item-mapa {
+  width: 100%;
+  height: 250px;
+  margin: 5px 0;
+  border-radius: 8px;
+  overflow: hidden;
+
+  iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

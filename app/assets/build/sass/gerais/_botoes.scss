@@ -1,0 +1,384 @@
+// Botão padrão
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  background: rgba(#000, 0.1);
+  border: none;
+  border-radius: 25px;
+  font-family: $fonte_titulo;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 100%;
+  text-transform: none;
+  color: $cor_fonte_escura;
+  text-align: center;
+  padding: 18px 32px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: rgba(#000, 0.15);
+  }
+
+  // Inativo
+  &[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  i {
+    margin-right: 10px;
+  }
+
+  // Outline
+  &.outline {
+    background: none;
+    border: 1px solid #ddd;
+    color: $cor_fonte_clara;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: #ddd;
+      color: $cor_fonte_escura;
+    }
+  }
+
+  // Botão primário
+  &.btn-primario {
+    background: $cor_primaria;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: darken($cor_primaria, 10%);
+    }
+
+    &.active:hover {
+      background: $cor_primaria;
+    }
+
+    // Outline
+    &.outline {
+      background: none;
+      border: 1px solid $cor_primaria;
+      color: $cor_primaria;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background: $cor_primaria;
+        color: #fff;
+      }
+    }
+  }
+
+  // Botão secundário
+  &.btn-secundario {
+    background: $cor_secundaria;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: darken($cor_secundaria, 10%);
+    }
+
+    &.active:hover {
+      background: $cor_secundaria;
+    }
+
+    // Outline
+    &.outline {
+      background: none;
+      border: 1px solid $cor_secundaria;
+      color: $cor_secundaria;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background: $cor_secundaria;
+        color: #fff;
+      }
+    }
+  }
+
+  // Botão terciário
+  &.btn-terciario {
+    background: rgba($cor_primaria, 0.1);
+    color: $cor_primaria;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background: $cor_primaria;
+      color: #fff;
+    }
+  }
+
+  // Botão branco
+  &.btn-white {
+    background: #fff;
+    border-color: #fff;
+    color: $cor_fonte_escura;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: $cor_primaria;
+    }
+
+    // Outline
+    &.outline {
+      background: none;
+      color: #fff;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background: #fff;
+        border-color: #fff;
+        color: $cor_secundaria;
+      }
+    }
+  }
+
+  // Facebook
+  &.btn-facebook {
+    border-color: $cor_facebook;
+    background: $cor_facebook;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border-color: darken($cor_facebook, 10%);
+      background: darken($cor_facebook, 10%);
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  // WhatsApp
+  &.btn-whatsapp {
+    border-color: #f5f5f5;
+    background: #f5f5f5;
+    color: darken($cor_whatsapp, 20%);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border-color: darken($cor_whatsapp, 20%);
+      background: darken($cor_whatsapp, 20%);
+      color: #fff;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+  &.btn-whatsapp2 {
+    border-color: darken($cor_whatsapp, 20%);
+    background: darken($cor_whatsapp, 20%);
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border-color: darken($cor_whatsapp, 15%);
+      background: darken($cor_whatsapp, 15%);
+      color: #fff;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  // Botão remover
+  &.btn-rem {
+    border-color: $error_color;
+    background: $error_color;
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      border-color: darken($error_color, 10%);
+      background: darken($error_color, 10%);
+    }
+
+    // Outline
+    &.outline {
+      background: none;
+      color: $error_color;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background: $error_color;
+        color: #fff;
+      }
+    }
+  }
+
+  // Botão muito pequeno
+  &.btn-xs {
+    padding: 7px 15px;
+    font-size: 11px;
+  }
+
+  // Botão pequeno
+  &.btn-sm {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  // Botão grande
+  &.btn-lg {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+
+  // Botão 100%
+  &.btn-full {
+    width: 100%;
+  }
+
+  // Círculo
+  &.btn-circle {
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    i {
+      margin: 0;
+    }
+  }
+}
+
+// Botão container
+.btn-container {
+  margin-top: 20px;
+  text-align: center;
+
+  &.left {
+    text-align: left;
+
+    // MOBILE
+    @include mq(s) {
+      text-align: center;
+    }
+  }
+
+  &.right {
+    text-align: right;
+
+    // MOBILE
+    @include mq(s) {
+      text-align: center;
+    }
+  }
+}
+
+// ------------------------------------
+// Efeito Pulse (Primário)
+// ------------------------------------
+@keyframes btn-pulse-primario {
+  0% {
+    box-shadow: 0 0 0 0 rgba($cor_primaria, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba($cor_primaria, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($cor_primaria, 0);
+  }
+}
+// Efeito constante
+.btn-primario.pulse {
+  animation: btn-pulse-primario 2s infinite;
+}
+// Efeito hover
+.btn-primario.pulse-hv {
+  &:hover:not(:disabled):not(.disabled) {
+    animation: btn-pulse-primario 1.5s;
+  }
+}
+
+// ------------------------------------
+// Efeito Pulse (Branco)
+// ------------------------------------
+@keyframes btn-pulse-white {
+  0% {
+    box-shadow: 0 0 0 0 rgba(#fff, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(#fff, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#fff, 0);
+  }
+}
+// Efeito constante
+.btn-white.pulse {
+  animation: btn-pulse-white 2s infinite;
+}
+// Efeito hover
+.btn-white.pulse-hv {
+  &:hover:not(:disabled):not(.disabled) {
+    animation: btn-pulse-white 1.5s;
+  }
+}
+
+// ------------------------------------
+// Efeito Pulse (WhatsApp)
+// ------------------------------------
+@keyframes btn-pulse-whats {
+  0% {
+    box-shadow: 0 0 0 0 rgba($cor_whatsapp, 0.75);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba($cor_whatsapp, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($cor_whatsapp, 0);
+  }
+}
+// Efeito constante
+.btn-whatsapp.pulse,
+.btn-whatsapp2.pulse {
+  animation: btn-pulse-whats 2s infinite;
+}
+// Efeito hover
+.btn-whatsapp.pulse-hv,
+.btn-whatsapp2.pulse-hv {
+  &:hover:not(:disabled):not(.disabled) {
+    animation: btn-pulse-whats 1.5s;
+  }
+}

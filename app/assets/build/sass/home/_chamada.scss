@@ -1,0 +1,43 @@
+// Seção
+.chamada-home {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  // MOBILE
+  @include mq(s) {
+    padding: 0 10px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+// Máscara fundo
+.chamada-home.bg-image .mascara {
+}
+
+// Título
+.chamada-home .titulo {
+}
+
+// Subtítulo
+.chamada-home .subtitulo {
+  font-weight: 300;
+}
+
+// Botão
+.chamada-home .btn-container {
+  margin-top: 10px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 0px;
+  }
+
+  .btn {
+    // MOBILE
+    @include mq(s) {
+      padding: 14px 22px;
+      font-size: 14px;
+    }
+  }
+}

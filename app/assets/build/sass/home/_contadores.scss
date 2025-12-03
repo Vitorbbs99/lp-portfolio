@@ -1,0 +1,71 @@
+// Seção
+.contadores-home {
+}
+
+// Máscara fundo
+.contadores-home.bg-image .mascara {
+}
+
+// Título
+.contadores-home .titulo {
+}
+
+// Subtítulo
+.contadores-home .subtitulo {
+  font-weight: 300;
+}
+
+// Lista de contadores
+.contadores-lista {
+  display: flex;
+  //align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 10px;
+  }
+}
+
+// Contador
+.contador-wrp {
+  margin-bottom: 30px;
+}
+.contador-item {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.contador-num-wrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 28px;
+  }
+}
+.contador-prefix {
+  color: lighten($cor_primaria, 5%);
+}
+.contador-num {
+  margin: 0 10px;
+}
+.contador-sufix {
+  font-size: 0.8em;
+}
+.contador-titulo {
+  margin-top: 10px;
+  font-weight: 300;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 5px;
+  }
+}

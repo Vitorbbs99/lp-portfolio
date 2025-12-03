@@ -1,0 +1,197 @@
+// Banner do topo
+.pag-banner {
+  position: relative;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 60px 0;
+
+  // MOBILE
+  @include mq(s) {
+    padding: 40px 0;
+  }
+
+  .mascara {
+    background-color: rgba(#000, 0.75);
+  }
+
+  .content {
+    position: relative;
+    text-align: center;
+  }
+
+  .titulo,
+  .subtitulo,
+  .btn-container {
+    float: none;
+  }
+
+  .titulo {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .subtitulo {
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: 40px;
+
+    // MOBILE
+    @include mq(s) {
+      margin-top: 30px;
+    }
+  }
+
+  .texto {
+    color: #fff;
+    margin-top: 40px;
+
+    // MOBILE
+    @include mq(s) {
+      margin-top: 30px;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    b,
+    strong {
+      color: #fff;
+    }
+  }
+
+  .btn-container {
+    margin-top: 40px;
+  }
+}
+
+// Breadcrumb
+.pag-banner .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin-top: 40px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 30px;
+  }
+
+  // Sepatador
+  & li + li::before {
+    color: rgba(#fff, 0.3);
+  }
+
+  // Links
+  a {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: $cor_primaria;
+    }
+  }
+}
+
+// Botão voltar
+.pag-banner .go-back {
+  position: absolute;
+  z-index: 2;
+  top: 5px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: 0;
+  color: $cor_primaria;
+  font-size: 20px;
+
+  // MOBILE
+  @include mq(s) {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  i {
+    margin: 0;
+    margin-left: -3px;
+  }
+
+  & + .titulo {
+    // MOBILE
+    @include mq(s) {
+      margin-left: 40px;
+      max-width: 250px;
+    }
+  }
+}
+
+// Textos
+.secao-pag {
+  .texto {
+    font-size: 18px;
+    font-weight: 300;
+    color: $cor_fonte_escura;
+
+    // MOBILE
+    @include mq(s) {
+      font-size: 16px;
+    }
+
+    b,
+    strong {
+      font-weight: 600;
+    }
+
+    h1,
+    h2 {
+      font-weight: 600;
+    }
+  }
+}
+
+// Alinha texto ao centro (Grid)
+.pag-inst-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pag-inst-texto {
+}
+
+.pag-height-fix:not(.loaded) {
+  min-height: 100vh;
+}
+
+// Manutenção
+.manutencao-body {
+  padding-top: 0;
+}
+.manutencao-pg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.manutencao-content {
+  text-align: center;
+}
+.manutencao-logo {
+  display: inline-block;
+  height: 65px;
+  margin-bottom: 30px;
+
+  img {
+    height: 100%;
+  }
+}
+.manutencao-infos {
+  .texto {
+    font-size: 18px;
+  }
+}

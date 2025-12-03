@@ -1,0 +1,45 @@
+// Bloco download
+.download-bl-wrp {
+  margin-bottom: 20px;
+}
+.download-bl {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: 0.3s ease-in-out;
+  color: $cor_fonte_escura;
+
+  &:hover {
+    background-color: $cor_primaria;
+    color: #fff;
+  }
+}
+.download-bl-icon {
+  flex-shrink: 0;
+  margin-right: 15px;
+  font-size: 32px;
+  color: $cor_primaria;
+  transition: 0.3s ease-in-out;
+}
+.download-bl:hover .download-bl-icon {
+  color: #fff;
+  transform: scale(1.1);
+}
+.download-bl-infos {
+  flex: 1;
+  text-align: left;
+}
+.download-bl-tit {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+.download-bl-txt {
+  font-size: 14px;
+  font-weight: 300;
+}

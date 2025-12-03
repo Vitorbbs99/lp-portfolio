@@ -1,0 +1,81 @@
+// Variáveis
+$lightbox-arrows-width: 2px; // Espessura das setas
+
+// Overlay (Plano de fundo)
+.sl-overlay {
+  background-color: rgba(#000, 0.8);
+  opacity: 1;
+}
+
+// Contador
+.sl-wrapper .sl-counter {
+  color: #fff;
+}
+
+// Setas
+.sl-wrapper .sl-navigation button {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    border-style: solid;
+    border-color: #fff;
+  }
+}
+// Seta anterior
+.sl-wrapper .sl-navigation button.sl-prev {
+  &::before {
+    left: 5px;
+    border-width: $lightbox-arrows-width 0 0 $lightbox-arrows-width;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+// Seta próximo
+.sl-wrapper .sl-navigation button.sl-next {
+  &::before {
+    right: 5px;
+    border-width: $lightbox-arrows-width $lightbox-arrows-width 0 0;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}
+
+// Botão fechar
+.sl-wrapper .sl-close {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 2px;
+    height: 30px;
+    background-color: #fff;
+    transition: 0.3s;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+// Imagem
+.sl-wrapper .sl-image img {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+// Título da imagem
+.sl-wrapper .sl-image .sl-caption {
+  background: none;
+  padding-top: 5px;
+  text-align: center;
+}

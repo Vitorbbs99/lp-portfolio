@@ -1,0 +1,348 @@
+// Container
+.campo-container {
+  position: relative;
+  margin-bottom: 20px;
+
+  // Label
+  label {
+    display: inline-block;
+    font-weight: 600;
+    color: $cor_fonte_escura;
+    margin-bottom: 3px;
+  }
+}
+
+// Input
+.campo {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  outline: none;
+  box-shadow: none;
+  height: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: $fonte_geral;
+  font-size: 16px;
+  font-weight: normal;
+  color: $cor_fonte_escura;
+  @include placeholder($cor_fonte_clara);
+  transition: 0.3s;
+
+  &:focus {
+    border-color: $cor_primaria;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+// Campo com ícone
+.campo-icon {
+  position: relative;
+
+  .campo {
+    padding-left: 45px;
+
+    // MOBILE
+    @include mq(s) {
+      padding-left: 40px;
+    }
+
+    &.active ~ .icon i,
+    &:focus ~ .icon i {
+      color: $cor_primaria;
+    }
+  }
+
+  label.icon {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    cursor: pointer;
+
+    i {
+      color: rgba(#000, 0.3);
+      font-size: 20px;
+      transition: 0.3s;
+    }
+  }
+}
+
+// Textarea
+textarea.campo {
+  height: auto;
+  padding: 15px;
+  resize: none;
+}
+
+// Arquivo
+.campo.file {
+  padding: 10px 10px 0px 12px;
+  background: none;
+}
+
+// Select
+select.campo {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:hover + .arrow,
+  &:focus + .arrow {
+    border-top-color: $cor_fonte_escura;
+  }
+}
+// Arrow (Select)
+.campo-container .arrow {
+  position: absolute;
+  bottom: 18px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: $cor_fonte_clara transparent transparent transparent;
+}
+
+// Radio / Checkbox
+.campo-container.cr-container {
+  width: auto;
+  > label:not(.cr-lbl) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  // Item
+  .cr-lbl {
+    display: inline-flex;
+    align-items: flex-start;
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+
+    // MOBILE
+    @include mq(s) {
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    input {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
+    }
+
+    // Radio
+    .radio {
+      position: relative;
+      flex-shrink: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      background: #ddd;
+      margin-right: 5px;
+      text-align: center;
+      transition: 0.2s;
+    }
+    &:hover .radio {
+      border-color: $cor_primaria;
+    }
+    input:checked + .radio {
+      background: $cor_primaria;
+      border-color: $cor_primaria;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 5.5px;
+        width: 5px;
+        height: 8px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(45deg);
+      }
+    }
+
+    // Checkbox
+    .checkbox {
+      position: relative;
+      flex-shrink: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      background: #ddd;
+      margin-right: 5px;
+      text-align: center;
+      transition: 0.2s;
+    }
+    &:hover .checkbox {
+      border-color: $cor_primaria;
+    }
+    input:checked + .checkbox {
+      background: $cor_primaria;
+      border-color: $cor_primaria;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 5.5px;
+        width: 5px;
+        height: 8px;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(45deg);
+      }
+    }
+
+    // Texto
+    > span {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: $cor_fonte_clara;
+    }
+    input:checked ~ span {
+      color: $cor_fonte_escura;
+    }
+    input[disabled] ~ span {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}
+
+// Contador de caracter
+.caracter_count {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  font-size: 14px;
+  color: $cor_fonte_clara;
+}
+
+// Loading
+.campo-loading {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  i {
+    font-size: 24px;
+    color: rgba(#000, 0.5);
+  }
+}
+.campo-loading + .campo {
+  padding-right: 50px;
+}
+
+// Validação de formulário
+.show-validacao.valid::after {
+  content: "\f058";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: $success_color;
+  font-size: em(20);
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  right: 10px;
+}
+.parsley-errors-list {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  li {
+    z-index: $z_index_geral;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background: $error_color;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    // Ponta
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -8px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent $error_color transparent;
+    }
+  }
+}
+
+// Recaptcha container
+.recaptcha-container {
+  position: relative;
+  text-align: center;
+
+  // Botão
+  .recaptcha-el {
+    display: inline-block !important;
+  }
+}
+.grecaptcha-badge {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+// Campo Oculto (Captcha)
+input[name="cph1d3"],
+input[name="cpt1m3"] {
+  position: absolute !important;
+  z-index: -1 !important;
+  width: 1px !important;
+  height: 1px !important;
+  cursor: default !important;
+  opacity: 0 !important;
+  border: none !important;
+  background: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,64 @@
+// Seção
+.home-fotos {
+}
+
+// Título
+.fotos-titulo {
+}
+
+// Subtítulo
+.fotos-subtitulo {
+  font-weight: 300;
+}
+
+// Thumb
+.galeria-thumb {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  color: $cor_fonte_escura;
+
+  figure {
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+    transition: 0.5s ease-in-out;
+  }
+  &:hover img {
+    transform: scale(1.2);
+  }
+}
+.galeria-tit {
+  margin-top: 5px;
+  font-weight: normal;
+  text-align: center;
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 15px;
+  }
+}
+
+// Carrossel
+.carrossel-fotos {
+  // MOBILE (Ajuste para a borda infinita)
+  @include mq(s) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  // Ajuste para os itens ficarem com a mesma altura
+  .splide__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.carrossel-fotos .galeria-thumb {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

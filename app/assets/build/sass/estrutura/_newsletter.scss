@@ -1,0 +1,107 @@
+// Seção
+.newsletter-secao {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  // MOBILE
+  @include mq(s) {
+    padding: 0 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+// Fundo blur
+.newsletter-secao .bg-blur {
+  filter: blur(5px);
+}
+// Máscara
+.newsletter-secao .mascara {
+  background: rgba(#000, 0.7);
+}
+
+// Título
+.newsletter-secao .titulo {
+}
+
+// Subtítulo
+.newsletter-secao .subtitulo {
+  font-weight: 300;
+}
+
+// Formulário
+.newsletter-form-wrp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.newsletter-form-content {
+  margin-top: 10px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 0px;
+  }
+}
+.newsletter-form {
+  display: flex;
+  align-items: center;
+
+  // MOBILE
+  @include mq(s) {
+    flex-direction: column;
+  }
+}
+
+// Radius dos campos e botão
+$newsletter-radius: 25px;
+
+// Campos
+.newsletter-form .campo-container {
+  flex: 1;
+  margin-bottom: 0px;
+  margin-right: 10px;
+
+  // MOBILE
+  @include mq(s) {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+
+  .campo {
+    height: 45px;
+    border-radius: 0;
+
+    // MOBILE
+    @include mq(s) {
+      border-radius: $newsletter-radius;
+    }
+  }
+  &:first-child .campo {
+    border-top-left-radius: $newsletter-radius;
+    border-bottom-left-radius: $newsletter-radius;
+  }
+}
+
+// Botão
+.newsletter-btn {
+  flex-shrink: 0;
+
+  .btn {
+    width: 100%;
+    height: 45px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: $newsletter-radius;
+    border-bottom-right-radius: $newsletter-radius;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    // MOBILE
+    @include mq(s) {
+      border-radius: $newsletter-radius;
+    }
+  }
+}

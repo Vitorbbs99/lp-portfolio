@@ -1,0 +1,99 @@
+// Página
+.servico-det {
+}
+
+.servico-det-wrp {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+// Foto
+.servico-detalhe-foto {
+  margin-bottom: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+// Texto
+.servico-detalhe-texto {
+}
+
+// Formulário
+.servico-det-form-wrp {
+  position: sticky;
+  top: 20px; // <-- Ajustar caso o header seja fixo no topo
+  padding-left: 10px;
+
+  // TABLET
+  @include mq(m) {
+    position: relative;
+    top: initial;
+    margin-top: 30px;
+    padding-left: 0px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    position: relative;
+    top: initial;
+    margin-top: 30px;
+    padding-left: 0px;
+  }
+}
+.servico-det-form {
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.servico-det-form-tit {
+  padding: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: $cor_primaria;
+
+  // MOBILE
+  @include mq(s) {
+    padding: 20px;
+    font-size: 20px;
+  }
+}
+.servico-det-form-body {
+  padding: 30px;
+  padding-top: 0px;
+  text-align: center;
+  color: $cor_fonte_escura;
+
+  // MOBILE
+  @include mq(s) {
+    padding: 20px;
+    padding-top: 0px;
+  }
+
+  .texto {
+    font-size: 16px;
+    color: $cor_fonte_escura;
+    margin-bottom: 20px;
+  }
+
+  .campo-container {
+    float: none;
+    text-align: left;
+  }
+
+  .recaptcha-container {
+    float: none;
+  }
+
+  .btn-container {
+    float: none;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}

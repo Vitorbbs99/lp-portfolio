@@ -1,0 +1,173 @@
+// Seção
+.slide-home {
+  position: relative;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+// Slide item
+.carousel-slide-item {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &[href="#"] {
+    cursor: default;
+  }
+}
+
+// Slide imagem
+.carousel-slide-img {
+  img {
+    width: 100%;
+  }
+}
+
+// Slide background
+.carousel-slide-bg,
+.carousel-slide-video {
+  height: 700px;
+
+  // TABLET
+  @include mq(m) {
+    height: 500px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    height: 400px;
+  }
+}
+.carousel-slide-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+// Slide video
+.carousel-slide-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// Máscara
+.carousel-slide-overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(#000, 0.5);
+  text-align: center;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+// Conteúdo
+.carousel-slide-content {
+  flex: 1;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+// Título
+.carousel-slide-tit {
+  text-align: inherit;
+  white-space: pre-line;
+  color: #fff;
+}
+
+// Subtítulo
+.carousel-slide-subtit {
+  text-align: inherit;
+  white-space: pre-line;
+  color: #fff;
+}
+
+// Texto
+.carousel-slide-txt {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.4;
+  white-space: pre-line;
+  color: #fff;
+
+  // TABLET
+  @include mq(m) {
+    font-size: 18px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    font-size: 16px;
+  }
+}
+
+// Botão
+.carousel-slide-btn {
+  margin-top: 30px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 20px;
+  }
+
+  .btn {
+    // MOBILE
+    @include mq(s) {
+      font-size: 14px;
+      padding: 12px 25px;
+    }
+  }
+}
+
+// Alinhamento à esquerda
+.carousel-slide-overlay.left {
+  // DESKTOP
+  @include mq(l) {
+    text-align: left;
+    background: linear-gradient(to right, rgba(#000, 0.9), transparent);
+  }
+
+  .carousel-slide-tit::after {
+    // DESKTOP
+    @include mq(l) {
+      right: initial;
+      left: 0;
+    }
+  }
+}
+
+// Ajuste para as animações
+[data-slide-animation] {
+  opacity: 0;
+}
+
+// Ajuste topo transparente
+.home-full .carousel-slide-bg,
+.home-full .carousel-slide-video {
+  height: 90vh;
+
+  // TABLET
+  @include mq(m) {
+    height: 500px;
+  }
+
+  // MOBILE
+  @include mq(s) {
+    height: 400px;
+  }
+}

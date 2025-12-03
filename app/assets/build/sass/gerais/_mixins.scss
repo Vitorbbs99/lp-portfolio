@@ -1,0 +1,36 @@
+// ------------------------------------
+//	MIXINS E FUNÇÕES
+// -----------------------------------
+
+// Mixin de clearfix
+@mixin clearfix {
+  &::after, &::before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Cor do placeholder
+@mixin placeholder($cor) {
+  &::placeholder {
+    opacity: .8;
+    color: $cor !important;
+  }
+  &::-webkit-input-placeholder {
+    opacity: .8;
+    color: $cor !important;
+  }
+  &:-moz-placeholder {
+    opacity: .8;
+    color: $cor !important;
+  }
+  &::-moz-placeholder {
+    opacity: .8;
+    color: $cor !important;
+  }
+  &:-ms-input-placeholder {
+    opacity: .8;
+    color: $cor !important;
+  }
+}

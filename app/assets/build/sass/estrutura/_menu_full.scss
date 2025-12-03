@@ -1,0 +1,115 @@
+// Barra principal
+.fdx-menu.full {
+  text-align: left;
+  background: $cor_fundo2;
+  border-top: 4px solid $cor_primaria;
+
+  // MOBILE
+  @include mq(s) {
+    display: none;
+  }
+
+  .container {
+    position: static;
+  }
+
+  li {
+    display: block;
+    float: left;
+    position: relative;
+  }
+
+  // Links geral
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    font-family: $fonte_geral;
+    color: $cor_fonte_escura;
+    font-size: 15px;
+    text-transform: none;
+    transition: 0.3s ease-out;
+
+    // TABLET
+    @include mq(m) {
+      font-size: 12px;
+    }
+
+    &:hover {
+      //background: $cor_primaria;
+      color: $cor_primaria;
+    }
+  }
+}
+
+// 1 Level
+.full .fdx-menu-1-level {
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  a {
+    position: relative;
+    z-index: 2;
+    background: none;
+    font-weight: bold;
+
+    &:hover {
+      background-color: rgba(#000, 0.05);
+    }
+  }
+}
+// Remove o padding do primeiro e último item do menu
+/* .full .fdx-menu-1-level > li:first-child > a {
+  padding-left: 0px;
+}
+.full .fdx-menu-1-level > li:last-child > a {
+  padding-right: 0px;
+} */
+
+// 2 Level
+.full .fdx-menu-2-level {
+  position: absolute;
+  z-index: 1;
+  width: 250px;
+  background: $cor_secundaria;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0) translate3d(0, -10px, 0);
+  transform-origin: top left;
+  transition: 0.3s ease;
+
+  li {
+    float: left;
+    width: 100%;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+.full .fdx-menu-1-level > li:hover > .fdx-menu-2-level {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1) translate3d(0, 0, 0);
+}
+
+// 3 Level
+.full .fdx-menu-3-level {
+  position: absolute;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  background: $cor_secundaria;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-20px, 0);
+  transition: 0.3s ease;
+}
+.full .fdx-menu-2-level > li:hover > .fdx-menu-3-level {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}

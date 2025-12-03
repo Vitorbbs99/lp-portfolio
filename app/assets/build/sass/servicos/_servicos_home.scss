@@ -1,0 +1,28 @@
+// Seção
+.servicos-home {
+}
+
+// Título
+.servicos-home .titulo {
+}
+
+// Subtítulo
+.servicos-home .subtitulo {
+  font-weight: 300;
+}
+
+// Carrossel
+.carrossel-servicos {
+  // MOBILE (Ajuste para a borda infinita)
+  @include mq(s) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .servico {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}

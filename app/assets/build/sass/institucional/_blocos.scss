@@ -1,0 +1,14 @@
+.pagina-bloco {
+  background: $cor_fundo2;
+}
+
+.home-sobre-left {
+  &.home-sobre-left-bloco {
+    padding-left: 15px;
+
+    // MOBILE
+    @include mq(s) {
+      padding-left: 0px;
+    }
+  }
+}

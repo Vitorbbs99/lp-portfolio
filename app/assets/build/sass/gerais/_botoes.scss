@@ -5,10 +5,10 @@
   width: auto;
   background: rgba(#000, 0.1);
   border: none;
-  border-radius: 25px;
+  border-radius: 50px;
   font-family: $fonte_titulo;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 100%;
   text-transform: none;
   color: $cor_fonte_escura;
@@ -52,8 +52,8 @@
 
   // Botão primário
   &.btn-primario {
-    background: $cor_primaria;
-    color: #fff;
+    background: #e0e0ff;
+    color: #040402;
 
     &:hover,
     &:focus,
@@ -258,7 +258,7 @@
   // Botão grande
   &.btn-lg {
     padding: 20px 40px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   // Botão 100%
@@ -284,7 +284,7 @@
 
 // Botão container
 .btn-container {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: center;
 
   &.left {

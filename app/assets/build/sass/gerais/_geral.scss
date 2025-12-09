@@ -197,7 +197,7 @@ img {
   display: inline-block;
 }
 .breadcrumb li + li::before {
-  content: "/";
+  content: '/';
   display: inline-block;
   margin: 0 8px;
   color: rgba(#000, 0.3);
@@ -229,5 +229,72 @@ img {
   }
   100% {
     background-position: 1000px 0;
+  }
+}
+
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: $cor_fundo2;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #480092;
+  transition: 0.3s;
+  background-size: 200% auto;
+  border-radius: 999px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-position: top center;
+}
+
+// cursor
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  #cursor,
+  #cursor-border {
+    display: none;
+  }
+}
+@media screen and (max-width: 759px) {
+  #cursor,
+  #cursor-border {
+    display: none;
+  }
+}
+#cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background: none;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+#cursor-border {
+  --size: 30px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: rgba($cor_primaria, 0.25);
+  pointer-events: none;
+  -webkit-transition: top 0.15s ease-out, left 0.15s ease-out,
+    width 0.15s ease-out, height 0.15s ease-out, background-color 0.15s ease-out;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+    height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 998;
+
+  &.hovered {
+    background: rgba($cor_primaria, 0.4);
+    --size: 55px;
   }
 }

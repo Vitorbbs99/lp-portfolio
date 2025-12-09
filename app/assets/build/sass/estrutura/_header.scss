@@ -19,7 +19,7 @@
 }
 .header-content {
   position: relative;
-  padding: 20px 10px;
+  padding: 30px 10px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -34,29 +34,13 @@
 
 // Logo
 .header-logo {
-  display: block;
-  float: left;
-  max-width: 150px;
+  font-weight: 500;
+  color: #f9f9f9;
+  font-size: 15.3;
+  transition: 0.3s ease-out;
 
-  // TABLET
-  @include mq(m) {
-    max-width: 120px;
-  }
-
-  // MOBILE
-  @include mq(s) {
-    float: none;
-    display: inline-block;
-    vertical-align: top;
-    max-width: 100px;
-  }
-
-  img {
-    will-change: transform;
-  }
-
-  &.white {
-    display: none;
+  &:hover {
+    color: $cor_primaria;
   }
 }
 
@@ -131,18 +115,6 @@
   left: 0;
   background: none;
   box-shadow: none;
-}
-
-// Logo
-.home-full .header-full:not(.active) .header-logo {
-  // Logo COLORIDO
-  &:not(.white) {
-    display: none;
-  }
-  // Logo BRANCO
-  &.white {
-    display: block;
-  }
 }
 
 // Botões

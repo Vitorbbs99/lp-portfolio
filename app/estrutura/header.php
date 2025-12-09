@@ -21,20 +21,18 @@
 
       <!-- LOGO -->
       <a href="<?=URL?>" title="<?=TITULO_SITE?>" class="header-logo">
-        <img src="<?=LOGO_PRINCIPAL?>" alt="<?=TITULO_SITE?>">
-      </a>
-      <a href="<?=URL?>" title="<?=TITULO_SITE?>" class="header-logo white">
-        <img src="<?=LOGO_FOOTER?>" alt="<?=TITULO_SITE?>">
+        Reload
       </a>
 
       <!-- DIREITA -->
       <div class="header-direita">
+
+        <!-- MENU LATERAL -->
+        <? include('menu_lateral.php'); ?>		
         
         <!-- BOTÕES/TELEFONES -->
         <div class="header-botoes">	
-          <? if (count($telsContato) > 0) { ?>
-            <a href="tel:<?=Tools::somenteNumeros($telsContato[0])?>" class="btn btn-terciario"><i class="fas fa-phone fa-flip-horizontal"></i> <?=$telsContato[0]?></a>
-          <? } ?>
+            <a href="tel:<?=Tools::somenteNumeros($telsContato[0])?>" class="btn btn-terciario">Projetos</a>
         </div>
         <!-- //BOTÕES/TELEFONES -->
 

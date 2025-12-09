@@ -4,19 +4,20 @@
     <div class="aps-content">
 
       <!-- Informações -->
-      <div class="grid-8 grid-m-7 grid-s-12 aps-infos">
+      <div class="grid-12 grid-m-7 grid-s-12 aps-infos">
+
+        <figure class="photo-ap">
+          <img src="<?=URL_APP?>assets/dist/img/vitor.png" alt="">
+        </figure>
 
         <!-- Título -->
-        <h1 class="titulo left aps-titulo" data-aos="fade-up"><?=$apresentacao['titulo']?></h1>
+        <h1 class="titulo aps-titulo" data-aos="fade-up">Desenvolvedor <b>Full Stack.</b></h1>
 
         <!-- Subtítulo -->
-        <h2 class="subtitulo left aps-subtitulo" data-aos="fade-up"><?=$apresentacao['subtitulo']?></h2>
-
-        <div class="load-img-mobile" data-img="load-form-mobile" data-aos="fade-up"></div>
+        <h2 class="subtitulo aps-subtitulo" data-aos="fade-up">Olá! Sou o Vitor – Transformo ideias em código.</h2>
         
-        <!-- Texto -->
-        <div class="aps-texto texto" data-aos="fade-up">
-          <?=$apresentacao['texto']?>
+        <div class="btn-container">
+          <a href="<?=URL?><?=$sobreHome['link']?>" class="btn btn-lg btn-primario">Ver projetos</a>
         </div>
 
       </div>

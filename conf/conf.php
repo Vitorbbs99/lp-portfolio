@@ -23,7 +23,7 @@ $linha_conf = $confs->SelectSingle('SELECT * FROM admin_conf');
 $url_local = true;
 $pasta_painel = 'painel/';
 if ($url_local) {
-  define('URL', 'http://localhost/vitor/');
+  define('URL', 'http://localhost/lp-portfolio/');
 } else {
   define('URL', $linha_sys['url_base']);
 }

@@ -174,7 +174,7 @@ CREATE TABLE `admin_conf` (
 --
 
 INSERT INTO `admin_conf` (`id`, `titulo_site`, `email_atendimento`, `email_formulario`, `telefones`, `horario_funcionamento`, `endereco`, `mapa`, `link_mapa`, `whatsapp`, `whats_msg`, `whats_lateral`, `whats_event`, `frase_topo`, `botao_txt`, `botao_url`, `popup_cookies`, `skype`, `facebook`, `twitter`, `instagram`, `linkedin`, `youtube`, `tiktok`, `seo_title`, `seo_description`, `fb_api_status`, `fb_api_id`, `fb_api_token`, `status`) VALUES
-(1, 'Vitor Barbosa', 'vitorbbs99@gmail.com', 'vitorbbs99@gmail.com', '(11) 99449-2349', '', '', '', 'https://www.google.com/maps?q=', '(11) 99449-2349', 'Olá! Gostaria de mais informações.', 1, '', '', '', 'https://google.com', 1, '', 'https://facebook.com', '', 'https://instagram.com', 'https://linkedin.com', '', 'https://tiktok.com/', 'Vitor Barbosa', 'Desenvolvedor full-stack.', 0, '', '', 1);
+(1, 'Vitor Barbosa', 'vitor@email.com', 'vitor@email.com', '(11) 99449-9999', '', '', '', 'https://www.google.com/maps?q=', '(11) 99449-9999', 'Olá! Gostaria de mais informações.', 1, '', '', '', 'https://google.com', 1, '', 'https://facebook.com', '', 'https://instagram.com', 'https://linkedin.com', '', 'https://tiktok.com/', 'Vitor Barbosa', 'Desenvolvedor full-stack.', 0, '', '', 1);
 
 -- --------------------------------------------------------
 

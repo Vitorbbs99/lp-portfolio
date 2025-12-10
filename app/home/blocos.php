@@ -1,49 +1,61 @@
-<? include(ACOES_APP_PATH."/home/blocos.php"); ?>
-<? if ($numBlocosDest > 0) { ?>
-<section class="secao bg-image blocos-home lazyload" style="background-image: url('<?=$lazyImg?>');" data-bg="<?=URL?>uploads/paginas/<?=$blocosText['id']?>/thumb-2000-0/<?=$blocosText['foto']?>">
-  <span class="mascara"></span>
+<section class="secao blocos-home">
   <div class="container">
 
-    <h2 class="titulo white blocos-titulo" data-aos="fade-up"><?=$blocosText['titulo']?></h2>
-    <h2 class="subtitulo white blocos-subtitulo" data-aos="fade-up"><?=$blocosText['subtitulo']?></h2>
+    <h2 class="titulo white blocos-titulo" data-aos="fade-up">Do servidor à interface <b>do usuário</b></h2>
 
     <!-- CARROSSEL -->
-    <div class="grid-12" data-aos="fade-up">
-      <div class="splide carousel carousel-arrows-zoom carousel-controls-white carrossel-blocos">
-        <div class="splide__track">
-          <div class="splide__list">
+    <div class="pag-inst-content mt-3" data-aos="fade-up">
 
-            <? foreach ($blocosDest as $bloco) { ?>
-
-              <!-- Repete -->
-              <div class="splide__slide">
-                <a href="<?=$bloco['url']?>" class="bloco-item" <?=$bloco['target']?>>
-                  <div class="bloco-item-img">
-                    <img class="shimmer lazyload" data-src="<?=URL?>uploads/blocos_home/<?=$bloco['id']?>/thumb-150-150/<?=$bloco['foto']?>" src="<?=Tools::genPchSrc(65, 65)?>" width="65px" height="65px" alt="<?=$bloco['titulo']?>">
-                  </div>
-                  <div class="bloco-item-infos">
-                    <div class="bloco-item-tit"><?=$bloco['titulo']?></div>
-                    <div class="bloco-item-txt"><?=$bloco['texto']?></div>
-                    <!-- <div class="bloco-item-btn">
-                      <button class="btn btn-sm btn-primario">Saiba Mais</button>
-                    </div> -->
-                  </div>
-                </a>
-              </div>
-              <!-- //Repete -->
-
-            <? } ?>
-
+        <!-- Repete -->
+          <div class="grid-3 grid-s-12 bloco-item">
+            <div class="bloco-item-img">
+              <img class="shimmer lazyload" data-src="<?=URL_APP?>assets/dist/img/server.png" src="<?=Tools::genPchSrc(65, 65)?>" width="65px" height="65px" alt="Back-end">
+            </div>
+            <div class="bloco-item-infos">
+              <div class="bloco-item-tit">Back-end</div>
+              <div class="bloco-item-txt">Desenvolvimento de APIs escaláveis, seguras e de alta performance.</div>
+            </div>
           </div>
-        </div>
-      </div>
+        <!-- //Repete -->
+
+        <!-- Repete -->
+        <div class="grid-3 grid-s-12 bloco-item">
+            <div class="bloco-item-img">
+              <img class="shimmer lazyload" data-src="<?=URL_APP?>assets/dist/img/puzzle.png" src="<?=Tools::genPchSrc(65, 65)?>" width="65px" height="65px" alt="Front-end">
+            </div>
+            <div class="bloco-item-infos">
+              <div class="bloco-item-tit">Front-end</div>
+              <div class="bloco-item-txt">Construção de interfaces dinâmicas e responsivas com foco em usabilidade.</div>
+            </div>
+          </div>
+        <!-- //Repete -->
+
+        <!-- Repete -->
+        <div class="grid-3 grid-s-12 bloco-item">
+            <div class="bloco-item-img">
+              <img class="shimmer lazyload" data-src="<?=URL_APP?>assets/dist/img/database.png" src="<?=Tools::genPchSrc(65, 65)?>" width="65px" height="65px" alt="Banco de dados">
+            </div>
+            <div class="bloco-item-infos">
+              <div class="bloco-item-tit">Banco de dados</div>
+              <div class="bloco-item-txt">Modelagem, otimização e gestão de dados relacionais e não relacionais.</div>
+            </div>
+          </div>
+        <!-- //Repete -->
+
+        <!-- Repete -->
+        <div class="grid-3 grid-s-12 bloco-item">
+            <div class="bloco-item-img">
+              <img class="shimmer lazyload" data-src="<?=URL_APP?>assets/dist/img/cloud.png" src="<?=Tools::genPchSrc(65, 65)?>" width="65px" height="65px" alt="Cloud & Deploy">
+            </div>
+            <div class="bloco-item-infos">
+              <div class="bloco-item-tit">Cloud & Deploy</div>
+              <div class="bloco-item-txt">Automação de deploy (CI/CD) e gerenciamento de repositórios/versões via GitHub/Docker.</div>
+            </div>
+          </div>
+        <!-- //Repete -->
+
     </div>
     <!-- //CARROSSEL -->
 
-    <div class="btn-container btn-cta-home" data-aos="zoom-in">
-      <a href="#lp-form" class="btn btn-white pulse"><?=$blocosText['botao']?></a>
-    </div>
-
   </div>
 </section>
-<? } ?>

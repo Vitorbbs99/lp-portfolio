@@ -2,9 +2,9 @@
 .titulo {
   position: relative;
   font-family: $fonte_titulo;
-  font-size: 32px;
+  font-size: 48px;
   line-height: 1.2;
-  font-weight: 800;
+  font-weight: 600;
   color: #f9f9f9;
   text-align: center;
   text-transform: none;
@@ -37,6 +37,9 @@
       left: 0;
       margin: 0;
     }
+  }
+  b {
+    color: $cor_primaria;
   }
 }
 

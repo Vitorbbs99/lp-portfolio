@@ -16,17 +16,14 @@ $pag_desc = SEO_DESCRIPTION;
   <!-- APRESENTAÇÃO -->
   <? include(APP_PATH.'/home/apresentacao.php'); ?>
 
-  <!-- SOBRE -->
-  <? include(APP_PATH.'/home/sobre.php'); ?>
-
   <!-- BLOCOS HOME -->
   <? include(APP_PATH.'/home/blocos.php'); ?>
 
+  <!-- Certificados -->
+  <? include(APP_PATH.'/home/certificados.php'); ?>
+
   <!-- FOTOS -->
   <? include(APP_PATH.'/home/fotos.php'); ?>
-
-  <!-- CONTADORES -->
-  <? include(APP_PATH.'/home/contadores.php'); ?>
 
   <!-- DEPOIMENTOS -->
   <? include(APP_PATH.'/home/depoimentos.php'); ?>
@@ -43,7 +40,7 @@ $pag_desc = SEO_DESCRIPTION;
   <!-- CLIENTES -->
   <? include(APP_PATH.'/home/clientes.php'); ?>
 
-  <!-- FOOTER -->
+  <!-- FOOTER https://www.flaticon.com/search?author_id=164&style_id=1170&type=standard&word=stack-->
   <? include(APP_PATH.'/estrutura/footer.php'); ?>
 
 </body>

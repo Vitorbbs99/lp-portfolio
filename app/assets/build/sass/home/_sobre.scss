@@ -1,84 +1,69 @@
-// Seção
-.home-sobre {
-}
-
-// Alinha conteúdo
-.home-sobre-content {
+.skills-container {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-// Informações
-.home-sobre-infos {
-  padding-right: 10px;
-
-  // MOBILE
-  @include mq(s) {
-    padding-right: 0px;
-  }
-}
-
-// Título
-.home-sobre-infos .titulo {
-}
-
-// Subtítulo
-.home-sobre-infos .subtitulo {
-  color: $cor_primaria;
-}
-
-// Texto
-.home-sobre-infos .texto {
-  font-size: 18px;
-  font-weight: 300;
+.skill-block {
+  border-radius: 10px;
+  padding: 30px;
   text-align: left;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0c0e23;
+  border-radius: 24px;
+  transition: transform 0.3s, border-color 0.3s;
+  display: flex;
+  gap: 20px;
+}
 
-  // MOBILE
-  @include mq(s) {
-    font-size: 16px;
-    text-align: center;
+.skill-block:hover {
+  transform: translateY(-5px);
+  border-color: #8a2be2; /* Efeito hover em roxo neon */
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #b9b6d917;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.skill-icon img {
+  width: 30px;
+}
+.skill-title {
+  font-size: 1.4em;
+  color: #f9f9f9; /* Roxo claro para destaque */
+  margin-top: 0;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skill-description {
+  font-size: 0.95em;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .skill-block {
+    width: calc(50% - 15px); /* 2 blocos por linha em telas médias */
   }
 }
 
-// Botão
-.home-sobre-infos .btn-container {
-  // MOBILE
-  @include mq(s) {
-    //margin-top: 0px;
-    text-align: center !important;
+@media (max-width: 600px) {
+  .skill-block {
+    width: 100%; /* 1 bloco por linha em telas pequenas */
   }
-
-  .btn {
-    // MOBILE
-    @include mq(s) {
-      padding: 14px 22px;
-      font-size: 14px;
-    }
-  }
-}
-
-// Foto
-.home-sobre-foto {
-  // MOBILE
-  @include mq(s) {
-    width: 100%;
-    margin: 0px;
-    margin-bottom: 15px;
-  }
-
-  figure {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    transform: translateZ(0);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-    img {
-      transition: 0.5s ease-in-out;
-    }
-    &:hover img {
-      transform: scale(1.1);
-    }
+  .skills-section {
+    padding: 40px 20px;
   }
 }

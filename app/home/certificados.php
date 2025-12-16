@@ -42,7 +42,7 @@
             <img src="<?=URL_APP?>assets/dist/img/server.png" alt="Ícone Back-end">
           </figure>
           <div>
-            <h3 class="skill-title">Full-Stack developer</h3>
+            <h3 class="skill-title">Java com SpringBoot</h3>
             <p class="skill-description">Desenvolvimento de APIs escaláveis, seguras e de alta performance (Node.js/Python).</p>
           </div>
         </div>
@@ -52,7 +52,7 @@
             <img src="<?=URL_APP?>assets/dist/img/server.png" alt="Ícone Back-end">
           </figure>
           <div>
-            <h3 class="skill-title">Front-end developer</h3>
+            <h3 class="skill-title">React completo</h3>
             <p class="skill-description">Desenvolvimento de APIs escaláveis, seguras e de alta performance (Node.js/Python).</p>
           </div>
         </div>

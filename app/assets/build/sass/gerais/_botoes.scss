@@ -129,7 +129,7 @@
     &:active,
     &.active {
       background: $cor_primaria;
-      color: #fff;
+      color: #000;
     }
   }
 
@@ -264,6 +264,12 @@
   &.btn-lg {
     padding: 20px 40px;
     font-size: 18px;
+
+    // MOBILE
+    @include mq(s) {
+      padding: 14px 22px;
+      font-size: 14px;
+    }
   }
 
   // Botão 100%

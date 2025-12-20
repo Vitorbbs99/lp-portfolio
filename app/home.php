@@ -22,23 +22,7 @@ $pag_desc = SEO_DESCRIPTION;
   <!-- Certificados -->
   <? include(APP_PATH.'/home/certificados.php'); ?>
 
-  <!-- FOTOS -->
-  <? include(APP_PATH.'/home/fotos.php'); ?>
-
-  <!-- DEPOIMENTOS -->
-  <? include(APP_PATH.'/home/depoimentos.php'); ?>
-
-  <!-- CHAMADA -->
-  <? include(APP_PATH.'/home/chamada.php'); ?>  
-
-  <!-- VÍDEOS -->
-  <? include(APP_PATH.'/home/videos.php'); ?>
-
-  <!-- FAQ -->
-  <? include(APP_PATH.'/home/faq.php'); ?>
-
-  <!-- CLIENTES -->
-  <? include(APP_PATH.'/home/clientes.php'); ?>
+  <? include(APP_PATH.'/home/skills.php'); ?>
 
   <!-- FOOTER https://www.flaticon.com/search?author_id=164&style_id=1170&type=standard&word=stack-->
   <? include(APP_PATH.'/estrutura/footer.php'); ?>

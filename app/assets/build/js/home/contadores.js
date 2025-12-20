@@ -2,39 +2,27 @@
 (function () {
   "use strict";
 
-  // Variáveis
-  const $container = $(".contadores-lista");
-  const $counters = $(".contador-num");
+  const $counters = $(".stat-number");
   const duration = 2000;
 
-  // Verifica os contadores existem
-  if ($container.length > 0) {
-    // Inicia os contadores quando estiverem visíveis na tela
-    onElementVisible($container, function () {
-      $counters.each(function () {
-        // Variáveis
-        const $el = $(this);
-        const countTo = $el.attr("data-count");
+  if ($counters.length > 0) {
+    $counters.each(function () {
+      const $el = $(this);
+      const countTo = parseInt($el.attr("data-count"), 10) || 0;
 
-        // Contador
-        $({
-          countCur: $el.text(),
-        }).animate(
-          {
-            countCur: countTo,
+      $({ countCur: 0 }).animate(
+        { countCur: countTo },
+        {
+          duration: duration,
+          easing: "swing",
+          step: function () {
+            $el.text(Math.floor(this.countCur));
           },
-          {
-            duration: duration,
-            easing: "swing",
-            step: function () {
-              $el.text(Math.floor(this.countCur));
-            },
-            complete: function () {
-              $el.text(this.countCur);
-            },
-          }
-        );
-      });
+          complete: function () {
+            $el.text(this.countCur);
+          },
+        }
+      );
     });
   }
 })();

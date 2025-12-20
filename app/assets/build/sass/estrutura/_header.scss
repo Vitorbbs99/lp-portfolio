@@ -1,10 +1,12 @@
 // Header principal
 .header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   z-index: $z_index_header;
   width: 100%;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  background-color: #000421;
+  backdrop-filter: blur(10px);
   transition: 0.5s ease;
 
   // MOBILE
@@ -19,7 +21,7 @@
 }
 .header-content {
   position: relative;
-  padding: 30px 10px;
+  padding: 20px 10px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -29,6 +31,7 @@
   @include mq(s) {
     position: static;
     justify-content: center;
+    padding: 0;
   }
 }
 

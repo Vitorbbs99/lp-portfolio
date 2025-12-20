@@ -12,8 +12,8 @@
 
   // MOBILE
   @include mq(s) {
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 30px;
   }
 }
 
@@ -61,12 +61,17 @@
 
   // MOBILE
   @include mq(s) {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   b,
   strong {
     color: $cor_primaria;
+  }
+  br {
+  @include mq(l) {
+    display: none;
+  }
   }
 }
 
@@ -80,7 +85,7 @@
 
   // MOBILE
   @include mq(s) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   b,
@@ -148,6 +153,11 @@
 }
 .aps-infos .btn-container {
   margin-top: 20px;
+
+  // MOBILE
+  @include mq(s) {
+    margin-top: 10px;
+  }
 }
 
 // Segura formulário

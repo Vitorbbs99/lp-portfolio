@@ -6,7 +6,7 @@
   <meta name="author" content="Vitor Barbosa" />
   <meta name="reply-to" content="<?=EMAIL_ATENDIMENTO?>"/>
   <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="<?=COR_SITE?>" />
+  <meta name="theme-color" content="#000319" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -36,11 +36,11 @@
   
   <!-- FAVICONS -->
   <link rel="shortcut icon" href="<?=FAVICON?>">
-  <link rel="icon" href="<?=FAVICONS_PATH?>/thumb-32-32/<?=$logo_favicon['logo']?>" sizes="32x32">
-  <link rel="icon" href="<?=FAVICONS_PATH?>/thumb-128-128/<?=$logo_favicon['logo']?>" sizes="128x128">
-  <link rel="icon" href="<?=FAVICONS_PATH?>/thumb-180-180/<?=$logo_favicon['logo']?>" sizes="180x180">
-  <link rel="icon" href="<?=FAVICONS_PATH?>/thumb-192-192/<?=$logo_favicon['logo']?>" sizes="192x192">
-  <link rel="apple-touch-icon" href="<?=FAVICONS_PATH?>/thumb-180-180/<?=$logo_favicon['logo']?>" sizes="180x180">
+  <link rel="icon" href="<?=URL?>fav.png" sizes="32x32">
+  <link rel="icon" href="<?=URL?>fav.png" sizes="128x128">
+  <link rel="icon" href="<?=URL?>fav.png" sizes="180x180">
+  <link rel="icon" href="<?=URL?>fav.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="<?=URL?>fav.png" sizes="180x180">
 
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

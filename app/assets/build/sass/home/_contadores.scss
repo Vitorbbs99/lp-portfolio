@@ -51,9 +51,6 @@
     font-size: 28px;
   }
 }
-.contador-prefix {
-  color: lighten($cor_primaria, 5%);
-}
 .contador-num {
   margin: 0 10px;
 }
@@ -89,7 +86,7 @@
   gap: 15px;
 }
 
-.stat-number {
+.stat-number, .contador-sufix {
   font-size: 69px;
   font-weight: 600;
   letter-spacing: -2px;
@@ -114,12 +111,17 @@
 @media (max-width: 768px) {
   .stats-container {
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 30px 40px;
+    align-items: flex-start;
+    margin-top: 40px;
   }
   .stat-item {
     margin: 20px 0;
   }
   .stat-number {
     font-size: 3.5em;
+  }
+  .stat-text br {
+    display: none;
   }
 }

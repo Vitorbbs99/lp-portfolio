@@ -46,6 +46,11 @@
   margin-bottom: 10px;
 }
 
+.skill-title small {
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .skill-description {
   font-size: 0.95em;
   color: #ccc;
@@ -66,4 +71,19 @@
   .skills-section {
     padding: 40px 20px;
   }
+  .skill-title {
+    font-size: 18px;
+  }
+}
+
+.left-courses {
+  position: sticky;
+    top: 90px;
+}
+
+@media (max-width: 768px) {
+.left-courses {
+  position: static;
+  margin-bottom: 40px;
+}
 }

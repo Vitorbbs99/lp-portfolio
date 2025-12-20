@@ -23,7 +23,7 @@ $linha_conf = $confs->SelectSingle('SELECT * FROM admin_conf');
 $url_local = true;
 $pasta_painel = 'painel/';
 if ($url_local) {
-  define('URL', 'http://localhost/lp-portfolio/');
+  define('URL', 'http://localhost/vitor/');
 } else {
   define('URL', $linha_sys['url_base']);
 }
@@ -100,7 +100,7 @@ define('LOGO_PRINCIPAL', $logos_path.'/'.$logo_principal['id'].'/'.$logo_princip
 define('LOGO_FOOTER', $logos_path.'/'.$logo_footer['id'].'/'.$logo_footer['logo']);
 define('LOGO_EMAIL', $logos_path.'/'.$logo_email['id'].'/'.$logo_email['logo']);
 define('LOGO_PAINEL', $logos_path.'/'.$logo_painel['id'].'/'.$logo_painel['logo']);
-define('LOGO_SHARE', $logos_path.'/'.$logo_share['id'].'/'.$logo_share['logo']);
+define('LOGO_SHARE',  URL . 'compartilhamento.webp');
 define('FAVICONS_PATH', $logos_path.'/'.$logo_favicon['id']);
 define('FAVICON', $logos_path.'/'.$logo_favicon['id'].'/thumb-32-32/'.$logo_favicon['logo']);
 
@@ -109,21 +109,6 @@ define('TIMEZONE', $linha_sys['timezone']);
 date_default_timezone_set('' . TIMEZONE . '');
 
 $lazyImg = "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=";
-
-// SCRIPTS
-$resultScripts = $conexao->prepare("SELECT * FROM admin_scripts WHERE status=1 ORDER BY ordem_exibicao ASC");
-$resultScripts->execute();
-$numScripts = $resultScripts->rowCount();
-$customScripts = $resultScripts->fetchAll(PDO::FETCH_ASSOC);
-function validCustomPageScript($pagRule, $pagUrl) {
-  $pagUrlVerify = $_GET['path'];
-  if ($pagRule == "equals" && ($pagUrl === $pagUrlVerify || $pagUrl."/" === $pagUrlVerify)) {
-    return true;
-  } else if ($pagRule == "contains" && (strpos($pagUrlVerify, $pagUrl) !== FALSE || strpos($pagUrlVerify, $pagUrl."/") !== FALSE)) {
-    return true;
-  }
-  return false;
-}
 
 // FORÇAR HTTPS
 if (!$url_local && $linha_sys['force_https'] == "1") {

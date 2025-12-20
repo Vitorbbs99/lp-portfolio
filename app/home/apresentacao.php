@@ -11,34 +11,38 @@
         </figure>
 
         <!-- Título -->
-        <h1 class="titulo aps-titulo" data-aos="fade-up">Desenvolvedor <b>Full-Stack.</b></h1>
+        <h1 class="titulo aps-titulo" data-aos="fade-up">Desenvolvedor<br> <b>Full-Stack.</b></h1>
 
         <!-- Subtítulo -->
         <h2 class="subtitulo aps-subtitulo" data-aos="fade-up">Olá! Sou o Vitor – Transformo ideias em código.</h2>
         
-        <div class="btn-container">
-          <a href="<?=URL?><?=$sobreHome['link']?>" class="btn btn-lg btn-primario btn-i-r">Ver projetos <i class="las la-arrow-right"></i></a>
+        <div class="btn-container" data-aos="fade-up">
+          <a href="https://github.com/Vitorbbs99" target="_blank" class="btn btn-lg btn-primario btn-i-r">Ver projetos no GitHub <i class="las la-arrow-right"></i></a>
         </div>
 
       </div>
       <!-- //Informações -->
 
-      <div class="stats-container">
+      <div class="stats-container hide-tablet">
 
         <div class="stat-item">
-            <span class="stat-number">7+</span>
-            <p class="stat-text">Anos de<br>experiência</p>
+            <span class="stat-number" data-count="7">0</span>
+              <div class="contador-sufix">+</div>
+            <p class="stat-text">Anos de<br> experiência</p>
         </div>
         <div class="stat-item">
-            <span class="stat-number">7+</span>
-            <p class="stat-text">Linguagens de<br>domínio</p>
+            <span class="stat-number" data-count="7">0</span>
+              <div class="contador-sufix">+</div>
+            <p class="stat-text">Linguagens de<br> domínio</p>
         </div>
         <div class="stat-item">
-            <span class="stat-number">5+</span>
-            <p class="stat-text">Projetos<br>no GitHub</p>
+            <span class="stat-number" data-count="5">0</span>
+              <div class="contador-sufix">+</div>
+            <p class="stat-text">Projetos<br> no GitHub</p>
         </div>
         <div class="stat-item">
-            <span class="stat-number">10k+</span>
+            <span class="stat-number" data-count="10">0</span>
+              <div class="contador-sufix">k+</div>
             <p class="stat-text">Horas de <br>código</p>
         </div>
 

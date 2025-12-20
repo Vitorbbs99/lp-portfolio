@@ -94,3 +94,36 @@ $(function () {
     });
   });
 })(jQuery);
+
+/* =================== HEADER =================== */
+$(function () {
+  // Ajusta padding-top da body com base na altura do header
+  /* function fixBodyTop() {
+    if ($(".header").length && $(".header").css("position") === "fixed") {
+      const headerHeight = $(".header").outerHeight();
+      $("body").css("padding-top", headerHeight);
+    }
+  }
+  $(window).on("resize", debounce(fixBodyTop, 50));
+  $(window).on("load", fixBodyTop); */
+
+  // Menu fixo ao rolar a tela
+  const $header = $(".header-full");
+  if ($header.length > 0) {
+    function toggleHeaderFull() {
+      const scrollTop = $(window).scrollTop();
+      if (scrollTop > 100) {
+        $header.addClass("active");
+      } else {
+        $header.removeClass("active");
+      }
+    }
+    toggleHeaderFull();
+    $(window).on(
+      "scroll",
+      debounce(function () {
+        toggleHeaderFull();
+      }, 50)
+    );
+  }
+});

@@ -1,4 +1,4 @@
-<section class="secao blocos-home">
+<section class="secao blocos-home" id="resume">
   <div class="container">
 
     <h2 class="titulo white blocos-titulo" data-aos="fade-up">Do servidor à interface <b>do usuário</b></h2>

@@ -1,7 +1,7 @@
 // Cores
-$footer-bg: #111; // Cor de fundo
-$footer-tit: #fff; // Cor dos títulos
-$footer-color: #ccc; // Cor dos textos
+$footer-bg: #000421; // Cor de fundo
+$footer-tit: #c0c0c0; // Cor dos títulos
+$footer-color: #c0c0c0; // Cor dos textos
 $footer-accent: $cor_primaria; // Cor de destaque e hover
 
 // Footer geral
@@ -193,9 +193,7 @@ $footer-accent: $cor_primaria; // Cor de destaque e hover
 
 // Barra inferior
 .footer-bar {
-  margin-top: 60px;
   position: relative;
-  border-top: 1px solid rgba($footer-color, 0.1);
   padding: 20px 10px;
 
   // MOBILE
@@ -402,8 +400,8 @@ $progress-wrap-color: $cor_secundaria;
   transition: all 200ms linear;
 
   @include mq(s) {
-    height: 50px;
-    width: 50px;
+    height: 54px;
+    width: 54px;
     right: 20px;
     bottom: 100px;
   }

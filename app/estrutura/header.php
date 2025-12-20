@@ -20,7 +20,7 @@
 		<div class="header-content">
 
       <!-- LOGO -->
-      <a href="<?=URL?>" title="<?=TITULO_SITE?>" class="header-logo">
+      <a href="<?=URL?>" title="<?=TITULO_SITE?>" class="header-logo hide-mobile">
         Reload
       </a>
 
@@ -32,7 +32,7 @@
         
         <!-- BOTÕES/TELEFONES -->
         <div class="header-botoes">	
-            <a href="tel:<?=Tools::somenteNumeros($telsContato[0])?>" class="btn btn-terciario">Projetos</a>
+            <a href="https://github.com/Vitorbbs99" target="_blank" class="btn btn-terciario">Projetos</a>
         </div>
         <!-- //BOTÕES/TELEFONES -->
 
